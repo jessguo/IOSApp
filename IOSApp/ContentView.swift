@@ -8,19 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject  var navModal:NavViewModal
+
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            ZStack {
+                Color("backgroundColor").ignoresSafeArea() // 1
+                
+                switch navModal.currentRoute {
+                    
+                
+                case .home:
+                     HomeView()
+                
+                case .login:
+                    LoginView()
+                
+                }
+            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(NavViewModal()).environmentObject(UserManager())
     }
 }

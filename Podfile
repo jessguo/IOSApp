@@ -6,7 +6,9 @@ target 'IOSApp' do
   use_frameworks!
 
   # Pods for IOSApp
-
+  pod 'Moya', '~> 15.0'
+  pod 'SwiftyJSON', '~> 4.0'
+  
   target 'IOSAppTests' do
     inherit! :search_paths
     # Pods for testing

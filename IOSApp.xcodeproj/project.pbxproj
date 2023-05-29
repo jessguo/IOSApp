@@ -17,6 +17,12 @@
 		FE4207572A20670500472EC0 /* IOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207562A20670500472EC0 /* IOSAppTests.swift */; };
 		FE4207612A20670500472EC0 /* IOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207602A20670500472EC0 /* IOSAppUITests.swift */; };
 		FE4207632A20670500472EC0 /* IOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207622A20670500472EC0 /* IOSAppUITestsLaunchTests.swift */; };
+		FE4207702A207FB700472EC0 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42076F2A207FB700472EC0 /* UserRequest.swift */; };
+		FE4207742A20824500472EC0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207732A20824500472EC0 /* LoginView.swift */; };
+		FE4207762A2093EB00472EC0 /* LoginModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207752A2093EB00472EC0 /* LoginModal.swift */; };
+		FE4207782A20A6CE00472EC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207772A20A6CE00472EC0 /* HomeView.swift */; };
+		FE42077A2A20A98900472EC0 /* NavModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207792A20A98900472EC0 /* NavModal.swift */; };
+		FE42077C2A225B6D00472EC0 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42077B2A225B6D00472EC0 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,12 @@
 		FE42075C2A20670500472EC0 /* IOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4207602A20670500472EC0 /* IOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSAppUITests.swift; sourceTree = "<group>"; };
 		FE4207622A20670500472EC0 /* IOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FE42076F2A207FB700472EC0 /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		FE4207732A20824500472EC0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FE4207752A2093EB00472EC0 /* LoginModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModal.swift; sourceTree = "<group>"; };
+		FE4207772A20A6CE00472EC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FE4207792A20A98900472EC0 /* NavModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavModal.swift; sourceTree = "<group>"; };
+		FE42077B2A225B6D00472EC0 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +118,6 @@
 				E7AD411484AE2500250000FA /* Pods-IOSAppTests.debug.xcconfig */,
 				0E75114D91E6323BC9537522 /* Pods-IOSAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -137,6 +148,10 @@
 			children = (
 				FE4207452A20670400472EC0 /* IOSAppApp.swift */,
 				FE4207472A20670400472EC0 /* ContentView.swift */,
+				FE42077D2A243A0100472EC0 /* Views */,
+				FE42077F2A243A3900472EC0 /* ViewModal */,
+				FE4207802A243A7B00472EC0 /* Router */,
+				FE4207812A243AAB00472EC0 /* Request */,
 				FE4207492A20670400472EC0 /* Assets.xcassets */,
 				FE42074B2A20670400472EC0 /* Preview Content */,
 			);
@@ -168,6 +183,40 @@
 			path = IOSAppUITests;
 			sourceTree = "<group>";
 		};
+		FE42077D2A243A0100472EC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE4207772A20A6CE00472EC0 /* HomeView.swift */,
+				FE4207732A20824500472EC0 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FE42077F2A243A3900472EC0 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				FE42077B2A225B6D00472EC0 /* UserManager.swift */,
+				FE4207752A2093EB00472EC0 /* LoginModal.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		FE4207802A243A7B00472EC0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FE4207792A20A98900472EC0 /* NavModal.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE4207812A243AAB00472EC0 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				FE42076F2A207FB700472EC0 /* UserRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,6 +228,7 @@
 				FE42073E2A20670400472EC0 /* Sources */,
 				FE42073F2A20670400472EC0 /* Frameworks */,
 				FE4207402A20670400472EC0 /* Resources */,
+				0A64AF64E03FAB1390FE6877 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +266,7 @@
 				FE4207582A20670500472EC0 /* Sources */,
 				FE4207592A20670500472EC0 /* Frameworks */,
 				FE42075A2A20670500472EC0 /* Resources */,
+				E6564704F00FB00A43A1EC4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +348,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0A64AF64E03FAB1390FE6877 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSApp/Pods-IOSApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSApp/Pods-IOSApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IOSApp/Pods-IOSApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		15F6D0B7AF015E04D024A04D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +409,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E6564704F00FB00A43A1EC4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSApp-IOSAppUITests/Pods-IOSApp-IOSAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSApp-IOSAppUITests/Pods-IOSApp-IOSAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IOSApp-IOSAppUITests/Pods-IOSApp-IOSAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F5895E43AE56481B27386071 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,6 +456,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE4207482A20670400472EC0 /* ContentView.swift in Sources */,
+				FE42077A2A20A98900472EC0 /* NavModal.swift in Sources */,
+				FE4207762A2093EB00472EC0 /* LoginModal.swift in Sources */,
+				FE4207702A207FB700472EC0 /* UserRequest.swift in Sources */,
+				FE4207782A20A6CE00472EC0 /* HomeView.swift in Sources */,
+				FE4207742A20824500472EC0 /* LoginView.swift in Sources */,
+				FE42077C2A225B6D00472EC0 /* UserManager.swift in Sources */,
 				FE4207462A20670400472EC0 /* IOSAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +622,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IOSApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 3D67WX8735;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -538,6 +630,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,6 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IOSApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 3D67WX8735;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -567,6 +661,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
