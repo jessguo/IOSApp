@@ -30,7 +30,7 @@ struct LoginView: View {
 
     func handlegLogin() {
         navModal.navigation(routeName: .home)
-        userProvider.request(.login(username: loginModal.username, password: loginModal.password)){ result in
+        provider.request(.login(username: loginModal.username, password: loginModal.password)){ result in
             switch result   {
             case let .success(moyaResponse):
                 let data = moyaResponse.data
