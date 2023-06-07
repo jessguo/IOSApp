@@ -29,14 +29,16 @@ struct LoginView: View {
     }
 
     func handlegLogin() {
-        navModal.navigation(routeName: .home)
-        provider.request(.login(username: loginModal.username, password: loginModal.password)){ result in
+        userProvider.request(.login(username: loginModal.username, password: loginModal.password)){ result in
             switch result   {
             case let .success(moyaResponse):
                 let data = moyaResponse.data
                 let jsonData = JSON(data)
-                userManager.user = jsonData
-                userManager.isLoggedIn = true
+                if jsonData["status"].intValue == 0 {
+                    userManager.user = jsonData["data"]
+                    userManager.isLoggedIn = true
+                    navModal.navigation(routeName: Route.home)
+                }
                 
             case .failure :
                 print(result)
@@ -89,7 +91,7 @@ struct InputErrorView: View {
 struct InputStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(20).foregroundColor(.white).background(Color("lightBackgroundColor")).cornerRadius(16)
+            .padding(20).foregroundColor(.white) .preferredColorScheme(.dark).background(Color("lightBackgroundColor")).cornerRadius(16)
     }
 }
 
@@ -102,6 +104,6 @@ struct LogosView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView().environmentObject(NavViewModal()).environmentObject(UserManager())
+        LoginView().preferredColorScheme(.dark).environmentObject(NavViewModal()).environmentObject(UserManager())
     }
 }

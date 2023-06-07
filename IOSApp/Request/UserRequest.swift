@@ -7,18 +7,19 @@
 
 import Foundation
 import Moya
+import SwiftyJSON
 
- let token = UserDefaults.standard.string(forKey: "token_key")
-
-    
-enum MyService {
+enum UserService {
     case login(username: String, password: String)
 }
 
-extension MyService: TargetType {
+enum AppService {
+    case getDevcieList(id: String)
+}
+
+extension UserService: TargetType {
     var baseURL: URL {
         return URL(string: "https://mp-api-test.mangopower.com")!
-        
     }
 
     var path: String {
@@ -47,9 +48,50 @@ extension MyService: TargetType {
             "app-id": "e25c6bc4-1688-44bb-80e2-6c057b20efe6",
             "Content-Type": "application/json",
             "client-id": "a9e98437-ab4c-49a0-8918-0d25d39f7fd3",
-            "Token":token ?? ""
+//            "Token": token ?? ""
         ]
     }
 }
 
-let provider = MoyaProvider<MyService>()
+extension AppService: TargetType {
+    var baseURL: URL {
+        return URL(string: "https://mp-app-api-test.mangopower.com")!
+    }
+
+    var path: String {
+        switch self {
+        case .getDevcieList:
+            return "/device/user-device-list"
+        }
+    }
+
+    var method: Moya.Method {
+        switch self {
+        case .getDevcieList:
+            return .post
+        }
+    }
+
+    var task: Moya.Task {
+        switch self {
+        case .getDevcieList(let id):
+            return .requestParameters(parameters: ["id": id], encoding: JSONEncoding.default)
+        }
+    }
+
+    var headers: [String: String]? {
+        let userManager = UserManager()
+        let token = userManager.user?["token"].stringValue
+    
+
+        return [
+            "app-id": "e25c6bc4-1688-44bb-80e2-6c057b20efe6",
+            "Content-Type": "application/json",
+            "client-id": "a9e98437-ab4c-49a0-8918-0d25d39f7fd3",
+            "Token": token ?? ""
+        ]
+    }
+}
+
+let userProvider = MoyaProvider<UserService>()
+let appProvider = MoyaProvider<AppService>()

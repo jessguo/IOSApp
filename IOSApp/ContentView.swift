@@ -13,12 +13,10 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ZStack {
-                Color("backgroundColor").ignoresSafeArea() // 1
+//            ZStack {
+//                Color("backgroundColor").ignoresSafeArea() // 1
                 
                 switch navModal.currentRoute {
-                    
-                
                 case .home:
                      HomeView()
                 
@@ -26,7 +24,7 @@ struct ContentView: View {
                     LoginView()
                 
                 }
-            }
+//            }
         }
     }
 }

@@ -23,6 +23,8 @@
 		FE4207782A20A6CE00472EC0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207772A20A6CE00472EC0 /* HomeView.swift */; };
 		FE42077A2A20A98900472EC0 /* NavModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207792A20A98900472EC0 /* NavModal.swift */; };
 		FE42077C2A225B6D00472EC0 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42077B2A225B6D00472EC0 /* UserManager.swift */; };
+		FE4207882A25AA8100472EC0 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207872A25AA8100472EC0 /* TestView.swift */; };
+		FE68E3FE2A2B40D400A5CA77 /* DeviceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE68E3FD2A2B40D400A5CA77 /* DeviceDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		FE4207772A20A6CE00472EC0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FE4207792A20A98900472EC0 /* NavModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavModal.swift; sourceTree = "<group>"; };
 		FE42077B2A225B6D00472EC0 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		FE4207872A25AA8100472EC0 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		FE68E3FD2A2B40D400A5CA77 /* DeviceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				FE4207772A20A6CE00472EC0 /* HomeView.swift */,
+				FE4207872A25AA8100472EC0 /* TestView.swift */,
+				FE68E3FD2A2B40D400A5CA77 /* DeviceDetail.swift */,
 				FE4207732A20824500472EC0 /* LoginView.swift */,
 			);
 			path = Views;
@@ -461,6 +467,8 @@
 				FE4207702A207FB700472EC0 /* UserRequest.swift in Sources */,
 				FE4207782A20A6CE00472EC0 /* HomeView.swift in Sources */,
 				FE4207742A20824500472EC0 /* LoginView.swift in Sources */,
+				FE68E3FE2A2B40D400A5CA77 /* DeviceDetail.swift in Sources */,
+				FE4207882A25AA8100472EC0 /* TestView.swift in Sources */,
 				FE42077C2A225B6D00472EC0 /* UserManager.swift in Sources */,
 				FE4207462A20670400472EC0 /* IOSAppApp.swift in Sources */,
 			);
@@ -628,6 +636,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -659,6 +669,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
