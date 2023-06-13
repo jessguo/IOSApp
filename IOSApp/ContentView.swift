@@ -8,23 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject  var navModal:NavViewModal
-
+    @EnvironmentObject var navModal: NavViewModal
 
     var body: some View {
         NavigationView {
-//            ZStack {
-//                Color("backgroundColor").ignoresSafeArea() // 1
-                
-                switch navModal.currentRoute {
-                case .home:
-                     HomeView()
-                
-                case .login:
-                    LoginView()
-                
-                }
-//            }
+            switch navModal.currentRoute {
+            case .home:
+                HomeView()
+            case .login:
+                LoginView()
+            }
         }
     }
 }

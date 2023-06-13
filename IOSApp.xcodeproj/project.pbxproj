@@ -25,6 +25,13 @@
 		FE42077C2A225B6D00472EC0 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42077B2A225B6D00472EC0 /* UserManager.swift */; };
 		FE4207882A25AA8100472EC0 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4207872A25AA8100472EC0 /* TestView.swift */; };
 		FE68E3FE2A2B40D400A5CA77 /* DeviceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE68E3FD2A2B40D400A5CA77 /* DeviceDetail.swift */; };
+		FE68E4002A3058DA00A5CA77 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE68E3FF2A3058DA00A5CA77 /* Setting.swift */; };
+		FE68E4022A30957900A5CA77 /* Firmware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE68E4012A30957900A5CA77 /* Firmware.swift */; };
+		FE9E40802A31B9EE00F9C657 /* EditNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9E407F2A31B9EE00F9C657 /* EditNameView.swift */; };
+		FE9E40822A31BDFA00F9C657 /* DeviceInfoModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9E40812A31BDFA00F9C657 /* DeviceInfoModal.swift */; };
+		FE9E40842A32C2D700F9C657 /* DeviceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9E40832A32C2D700F9C657 /* DeviceList.swift */; };
+		FE9E40862A3316E700F9C657 /* SearchDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9E40852A3316E700F9C657 /* SearchDeviceView.swift */; };
+		FE9E40892A38022B00F9C657 /* BingSNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9E40882A38022B00F9C657 /* BingSNView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +79,13 @@
 		FE42077B2A225B6D00472EC0 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		FE4207872A25AA8100472EC0 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		FE68E3FD2A2B40D400A5CA77 /* DeviceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetail.swift; sourceTree = "<group>"; };
+		FE68E3FF2A3058DA00A5CA77 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		FE68E4012A30957900A5CA77 /* Firmware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firmware.swift; sourceTree = "<group>"; };
+		FE9E407F2A31B9EE00F9C657 /* EditNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameView.swift; sourceTree = "<group>"; };
+		FE9E40812A31BDFA00F9C657 /* DeviceInfoModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoModal.swift; sourceTree = "<group>"; };
+		FE9E40832A32C2D700F9C657 /* DeviceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceList.swift; sourceTree = "<group>"; };
+		FE9E40852A3316E700F9C657 /* SearchDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDeviceView.swift; sourceTree = "<group>"; };
+		FE9E40882A38022B00F9C657 /* BingSNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingSNView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +166,7 @@
 			children = (
 				FE4207452A20670400472EC0 /* IOSAppApp.swift */,
 				FE4207472A20670400472EC0 /* ContentView.swift */,
+				FE9E407E2A31A71300F9C657 /* Components */,
 				FE42077D2A243A0100472EC0 /* Views */,
 				FE42077F2A243A3900472EC0 /* ViewModal */,
 				FE4207802A243A7B00472EC0 /* Router */,
@@ -193,6 +208,11 @@
 				FE4207772A20A6CE00472EC0 /* HomeView.swift */,
 				FE4207872A25AA8100472EC0 /* TestView.swift */,
 				FE68E3FD2A2B40D400A5CA77 /* DeviceDetail.swift */,
+				FE68E3FF2A3058DA00A5CA77 /* Setting.swift */,
+				FE9E407F2A31B9EE00F9C657 /* EditNameView.swift */,
+				FE9E40852A3316E700F9C657 /* SearchDeviceView.swift */,
+				FE9E40882A38022B00F9C657 /* BingSNView.swift */,
+				FE68E4012A30957900A5CA77 /* Firmware.swift */,
 				FE4207732A20824500472EC0 /* LoginView.swift */,
 			);
 			path = Views;
@@ -203,6 +223,8 @@
 			children = (
 				FE42077B2A225B6D00472EC0 /* UserManager.swift */,
 				FE4207752A2093EB00472EC0 /* LoginModal.swift */,
+				FE9E40832A32C2D700F9C657 /* DeviceList.swift */,
+				FE9E40812A31BDFA00F9C657 /* DeviceInfoModal.swift */,
 			);
 			path = ViewModal;
 			sourceTree = "<group>";
@@ -221,6 +243,13 @@
 				FE42076F2A207FB700472EC0 /* UserRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		FE9E407E2A31A71300F9C657 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,16 +490,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9E40842A32C2D700F9C657 /* DeviceList.swift in Sources */,
 				FE4207482A20670400472EC0 /* ContentView.swift in Sources */,
+				FE9E40862A3316E700F9C657 /* SearchDeviceView.swift in Sources */,
 				FE42077A2A20A98900472EC0 /* NavModal.swift in Sources */,
 				FE4207762A2093EB00472EC0 /* LoginModal.swift in Sources */,
 				FE4207702A207FB700472EC0 /* UserRequest.swift in Sources */,
 				FE4207782A20A6CE00472EC0 /* HomeView.swift in Sources */,
 				FE4207742A20824500472EC0 /* LoginView.swift in Sources */,
+				FE68E4022A30957900A5CA77 /* Firmware.swift in Sources */,
+				FE9E40802A31B9EE00F9C657 /* EditNameView.swift in Sources */,
+				FE68E4002A3058DA00A5CA77 /* Setting.swift in Sources */,
+				FE9E40892A38022B00F9C657 /* BingSNView.swift in Sources */,
 				FE68E3FE2A2B40D400A5CA77 /* DeviceDetail.swift in Sources */,
 				FE4207882A25AA8100472EC0 /* TestView.swift in Sources */,
 				FE42077C2A225B6D00472EC0 /* UserManager.swift in Sources */,
 				FE4207462A20670400472EC0 /* IOSAppApp.swift in Sources */,
+				FE9E40822A31BDFA00F9C657 /* DeviceInfoModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

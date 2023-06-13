@@ -17,6 +17,10 @@ enum AppService {
     case getDevcieList(id: String)
 }
 
+enum DeviceService {
+    case  upgradeDevice(id: String)
+}
+
 extension UserService: TargetType {
     var baseURL: URL {
         return URL(string: "https://mp-api-test.mangopower.com")!
@@ -93,5 +97,43 @@ extension AppService: TargetType {
     }
 }
 
+extension DeviceService: TargetType {
+    var baseURL: URL {
+        return URL(string: "https://mp-device-api-test.mangopower.com")!
+    }
+
+    var path: String {
+        switch self {
+        case .upgradeDevice:
+            return "/device/upgrade"
+        }
+    }
+
+    var method: Moya.Method {
+        switch self {
+        case .upgradeDevice:
+            return .post
+        }
+    }
+
+    var task: Moya.Task {
+        switch self {
+        case .upgradeDevice(let id):
+            return .requestParameters(parameters: ["id": id], encoding: JSONEncoding.default)
+        }
+    }
+
+    var headers: [String: String]? {
+        let userManager = UserManager()
+        let token = userManager.user?["token"].stringValue
+        return [
+            "app-id": "e25c6bc4-1688-44bb-80e2-6c057b20efe6",
+            "Content-Type": "application/json",
+            "client-id": "a9e98437-ab4c-49a0-8918-0d25d39f7fd3",
+            "Token": token ?? ""
+        ]
+    }
+}
 let userProvider = MoyaProvider<UserService>()
 let appProvider = MoyaProvider<AppService>()
+let deviceProvider = MoyaProvider<DeviceService>()

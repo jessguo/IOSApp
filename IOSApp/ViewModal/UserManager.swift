@@ -27,12 +27,15 @@ class UserManager: ObservableObject {
             UserDefaults.standard.set(isLoggedIn, forKey: "isLoggedIn")
         }
     }
+    @Published var userId = ""
 
     init() {
         if let data = UserDefaults.standard.data(forKey: "user"), let jsonData = try? JSON(data: data) {
             self.user = jsonData
+            self.userId = jsonData["id"].stringValue
         }
 
         self.isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+
     }
 }
